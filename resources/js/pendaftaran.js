@@ -98,6 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
         const foto = document.getElementsByName("foto_diri")[0];
         if (!foto.files.length) emptyFields.push("foto_diri");
 
+        const email = document.getElementById('email').value.trim();
+        if (!/^[\w.+-]+@gmail\.com$/.test(email)) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Email Tidak Valid!',
+                text: 'Alamat email harus menggunakan domain @gmail.com.',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
         if (emptyFields.length > 0) {
             Swal.fire({
                 icon: 'warning',
@@ -123,6 +134,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById('no_ktp').addEventListener('input', function () {
         this.value = this.value.replace(/\D/g, '').slice(0, 16);
+    });
+
+    document.getElementById('no_telp').addEventListener('input', function () {
+        this.value = this.value.replace(/\D/g, '').slice(0, 13);
     });
 
     const successMeta = document.querySelector('meta[name="session-success"]');

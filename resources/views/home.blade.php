@@ -119,7 +119,7 @@
             <hr class="mb-4 border-gray-300">
             <div class="space-y-6">
                 <div class="relative">
-                    <input type="tel" name="no_telp" id="no_telp" placeholder=" " class="peer w-full border border-gray-300 rounded px-3 pt-6 pb-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                    <input type="text" name="no_telp" id="no_telp" placeholder=" " class="peer w-full border border-gray-300 rounded px-3 pt-6 pb-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                     <label for="no_telp" class="absolute text-gray-500 text-sm left-3 top-2.5 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2.5 peer-focus:text-sm peer-focus:text-gray-500">No Telepon</label>
                 </div>
                 <div class="relative">
